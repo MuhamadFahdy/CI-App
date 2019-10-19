@@ -12,7 +12,14 @@
 
   </head>
   <body>
-<h1>halaman utama</h1>
+
+        <div class="container">
+          <div class="jumbotron">
+            <h1 class="display-4">Hello, <?= $nama; ?></h1>
+            <p class="lead">Rekayasa Web CodeIgniter 3</p>
+            <hr class="my-4">
+          </div>
+        </div>
 
 
     <!-- Optional JavaScript -->
