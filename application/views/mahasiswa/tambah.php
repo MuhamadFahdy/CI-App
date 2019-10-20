@@ -45,6 +45,7 @@
                       <option value="Teknik Mesin">Teknik Mesin</option>
                     </select>
                 </div>
+                <a href="<?= base_url(); ?>mahasiswa" class="btn btn-primary">Kembali</a>
                 <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>     
               </form>
             </div>
