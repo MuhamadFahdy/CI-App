@@ -1,11 +1,13 @@
 <?php 
 
-class People extends CI_Controller{
+class Peoples extends CI_Controller{
 	
 	public function index(){
 		$data['judul'] = 'List of People';
 
-		$this->load->model('People_model','peoples');
+		$this->load->model('Peoples_model','peoples');
+
+		$data['peoples'] = $this->peoples->getAllPeople();
 
 		//load library
 		$this->load->library('pagination');
@@ -33,7 +35,7 @@ class People extends CI_Controller{
 		$data['peoples'] = $this->peoples->getPeoples($config['per_page'],$data['start'],$data['keyword']);
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('mahasiswa/index', $data);
+		$this->load->view('peoples/index', $data);
 		$this->load->view('templates/footer');
 
 	}
