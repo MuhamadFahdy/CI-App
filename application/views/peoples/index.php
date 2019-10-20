@@ -42,15 +42,15 @@
 							<td><?= $people['name']; ?></td>
 							<td><?= $people['email']; ?></td>
 							<td>
-								<a href="" class="badge badge-warning"></a>
-								<a href="" class="badge badge-success"></a>
-								<a href="" class="badge badge-danger"></a>
+								<a href="" class="badge badge-warning">detail</a>
+								<a href="" class="badge badge-success">edit</a>
+								<a href="" class="badge badge-danger">delete</a>
 							</td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-			<?= $this->pagination->create_link(); ?>
+				<?= $this->pagination->create_links(); ?>
 		</div>
 	</div>
 </div>
