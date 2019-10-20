@@ -50,7 +50,7 @@ class Mahasiswa extends CI_Controller{
 		$data['mahasiswa']= $this->Mahasiswa_model->getMahasiswaById($id);
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('mahasiswa/index', $data);
+		$this->load->view('mahasiswa/detail', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -66,11 +66,11 @@ class Mahasiswa extends CI_Controller{
 
 		if ($this->form_validation->run() == false) {
 			$this->load->view('templates/header', $data);
-			$this->load->view('mahasiswa/tambah');
+			$this->load->view('mahasiswa/ubah',$data);
 			$this->load->view('templates/footer');
 		}else{
 			$this->Mahasiswa_model->ubahDataMahasiswa();
-			$this->session->set_flashdata('flash','Ditambahkan');
+			$this->session->set_flashdata('flash','Diubah');
 			redirect('mahasiswa');
 		}
 	}
